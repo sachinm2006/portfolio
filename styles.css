@@ -101,6 +101,7 @@ h1 span, h2 span { color: var(--lavender); }
 .orbit-system { position: absolute; z-index: 0; inset: 0; display: grid; place-items: center; pointer-events: none; }
 .orbit-track {
   --orbit-speed: 30s;
+  --orbit-delay: 0s;
   --orbit-tilt: 0deg;
   position: absolute;
   top: 50%;
@@ -109,12 +110,17 @@ h1 span, h2 span { color: var(--lavender); }
   border: 1px solid rgba(183, 125, 255, .19);
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(var(--orbit-tilt));
-  animation: orbit-spin var(--orbit-speed) linear infinite;
 }
-.orbit-track-code { width: min(84%, 470px); height: 70%; --orbit-tilt: -12deg; --orbit-speed: 34s; }
-.orbit-track-chip { width: min(74%, 420px); height: 58%; --orbit-tilt: 14deg; --orbit-speed: 29s; border-color: rgba(156, 103, 241, .17); }
-.orbit-track-ai { width: min(64%, 370px); height: 47%; --orbit-tilt: -8deg; --orbit-speed: 25s; border-color: rgba(207, 158, 255, .15); }
-.orbit-track-data { width: min(92%, 500px); height: 82%; --orbit-tilt: 7deg; --orbit-speed: 40s; border-color: rgba(156, 103, 241, .12); }
+.orbit-track-code { width: min(84%, 470px); height: 70%; --orbit-tilt: -12deg; --orbit-speed: 34s; --orbit-delay: -3s; }
+.orbit-track-chip { width: min(74%, 420px); height: 58%; --orbit-tilt: 14deg; --orbit-speed: 29s; --orbit-delay: -9s; border-color: rgba(156, 103, 241, .17); }
+.orbit-track-ai { width: min(64%, 370px); height: 47%; --orbit-tilt: -8deg; --orbit-speed: 25s; --orbit-delay: -6s; border-color: rgba(207, 158, 255, .15); }
+.orbit-track-data { width: min(92%, 500px); height: 82%; --orbit-tilt: 7deg; --orbit-speed: 40s; --orbit-delay: -25s; border-color: rgba(156, 103, 241, .12); }
+.orbit-star { position: absolute; z-index: 1; color: rgba(226, 194, 255, .76); font-size: .72rem; line-height: 1; text-shadow: 0 0 8px rgba(182, 113, 255, .8); pointer-events: none; }
+.orbit-track-code .orbit-star { top: 18%; left: 16%; }
+.orbit-track-chip .orbit-star { top: 73%; left: 81%; color: rgba(185, 138, 255, .74); }
+.orbit-track-ai .orbit-star { top: 68%; left: 12%; }
+.orbit-track-data .orbit-star { top: 24%; left: 86%; color: rgba(183, 132, 255, .68); }
+.orbit-rotor { position: absolute; z-index: 2; inset: 0; animation: orbit-rotate var(--orbit-speed) linear infinite; animation-delay: var(--orbit-delay); }
 .orbit-satellite {
   position: absolute;
   top: -13px;
@@ -130,12 +136,10 @@ h1 span, h2 span { color: var(--lavender); }
   background: rgba(26, 12, 42, .82);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 0 15px rgba(157, 72, 255, .2);
   animation: orbit-counter var(--orbit-speed) linear infinite;
+  animation-delay: var(--orbit-delay);
 }
 .orbit-satellite svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
-@keyframes orbit-spin {
-  from { transform: translate(-50%, -50%) rotate(var(--orbit-tilt)); }
-  to { transform: translate(-50%, -50%) rotate(calc(var(--orbit-tilt) + 360deg)); }
-}
+@keyframes orbit-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes orbit-counter {
   from { transform: rotate(0deg); }
   to { transform: rotate(-360deg); }
