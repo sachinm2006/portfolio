@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100719" />
+    <meta name="description" content="Sachin Nagaraj Mevundi — ECE student exploring software, electronics, and the space between them." />
+    <title>Sachin Nagaraj Mevundi — Software × Electronics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <svg class="filter-defs" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="logo-background-cutout" color-interpolation-filters="linearRGB">
+          <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  12.756 42.912 4.332 0 -0.42" />
+        </filter>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Sachin Nagaraj Mevundi home">
+          <span class="brand-mark-wrap" aria-hidden="true"><img class="brand-mark" src="assets/snm-mark.png" alt="" /></span>
+          <span class="brand-name">Sachin Nagaraj Mevundi</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+          <span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+          <a href="#top">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#interests">Skills</a>
+          <a href="#hackathon">Hackerring 2.0</a>
+          <a href="#education">Education</a>
+          <a class="nav-cta" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid container">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> Hello, I’m Sachin</p>
+            <h1 id="hero-title">Sachin Nagaraj <span>Mevundi</span></h1>
+            <p class="hero-statement">Building across <span>software and electronics.</span></p>
+            <p class="hero-lede">Second-year Electronics and Communication Engineering student at RV Institute of Technology and Management, Bengaluru. I enjoy building things at the intersection of software, electronics, and AI.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">View my projects <span aria-hidden="true">→</span></a>
+              <a class="button button-quiet" href="#contact">Contact me</a>
+            </div>
+            <div class="hero-meta" aria-label="Profile details">
+              <span><strong>ECE</strong> student</span>
+              <span class="meta-separator" aria-hidden="true"></span>
+              <span>RV Institute of Technology and Management</span>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-label="SNM monogram surrounded by a subtle orbit design">
+            <div class="art-grid"></div>
+            <div class="monogram-stage">
+              <img class="hero-mark-image" src="assets/snm-mark.png" alt="Sachin’s SNM monogram" />
+            </div>
+            <span class="art-note note-right">IDEAS<br />CIRCUITS<br />CODE<br />AI<br />IMPACT</span>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#about"><span class="scroll-line"></span> Scroll to explore</a>
+      </section>
+
+      <section class="section container about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">A little about <span>me.</span></h2>
+        </div>
+        <div class="about-layout">
+          <p class="about-copy">I study Electronics and Communication Engineering at RV Institute of Technology and Management in Bengaluru. I’m interested in both software and hardware, and I learn best by building—whether that means exploring digital logic, writing C++, or connecting a circuit to an idea.</p>
+          <div class="about-note">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <p><strong>One connected practice</strong><br />Software, electronics, and hands-on experimentation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="project-board">
+            <div class="section-heading heading-row">
+              <div>
+                <p class="eyebrow">Featured projects</p>
+                <h2 id="projects-title">Things I’ve <span>built.</span></h2>
+              </div>
+              <p class="section-aside">A mix of circuit projects and software experiments.</p>
+            </div>
+
+            <div class="project-grid">
+            <article class="project-card project-circuit">
+              <div class="project-visual adder-visual" aria-label="Photograph and circuit diagram for the 2-Bit Binary Ripple Carry Adder" role="img">
+                <img class="project-preview-image" src="assets/adder-preview.png" alt="" aria-hidden="true" />
+                <span class="visual-label">01 / DIGITAL LOGIC</span>
+              </div>
+              <div class="project-content">
+                <div class="project-title-row"><h3>2-Bit Binary Ripple Carry Adder</h3><div class="project-actions"><a class="project-icon-link" href="https://github.com/sachinm2006/-2-Bit-Binary-Ripple-Carry-Adder-" target="_blank" rel="noreferrer" aria-label="Open 2-Bit Binary Ripple Carry Adder on GitHub"><span aria-hidden="true">↗</span></a><a class="project-icon-link tinkercad-link" href="https://www.tinkercad.com/things/4k6UcEoDDM4-2-bit-adder-30" target="_blank" rel="noreferrer" aria-label="Open 2-Bit Adder Tinkercad simulation"><span aria-hidden="true">3D</span></a></div></div>
+                <p>A binary adder built with discrete BC548 NPN transistors, exploring logic gates and ripple carry propagation.</p>
+                <ul class="tag-list"><li>Digital logic</li><li>Transistors</li><li>Circuit design</li></ul>
+              </div>
+            </article>
+
+            <article class="project-card project-circuit">
+              <div class="project-visual chaser-visual" aria-label="Photograph of the LED Chaser circuit with glowing red LEDs" role="img">
+                <img class="project-preview-image" src="assets/led-chaser-preview.png" alt="" aria-hidden="true" />
+                <span class="visual-label">02 / SEQUENTIAL LOGIC</span>
+              </div>
+              <div class="project-content">
+                <div class="project-title-row"><h3>LED Chaser Circuit</h3><div class="project-actions"><a class="project-icon-link" href="https://github.com/sachinm2006/LED-Chaser" target="_blank" rel="noreferrer" aria-label="Open LED Chaser on GitHub"><span aria-hidden="true">↗</span></a><a class="project-icon-link tinkercad-link" href="https://www.tinkercad.com/things/3ehealz7Wxp-led-chasser" target="_blank" rel="noreferrer" aria-label="Open LED Chaser Tinkercad simulation"><span aria-hidden="true">3D</span></a></div></div>
+                <p>An NE555 timer and CD4017 decade counter create clock pulses for a sequence of illuminated LEDs.</p>
+                <ul class="tag-list"><li>NE555</li><li>CD4017</li><li>Electronics</li></ul>
+              </div>
+            </article>
+
+            <article class="project-card project-software">
+              <div class="project-visual app-visual sugar-visual" aria-label="Sugar Shield AI app preview with health information and a friendly AI assistant" role="img">
+                <img class="project-preview-image" src="assets/sugar-shield-preview.png" alt="" aria-hidden="true" />
+                <span class="visual-label">03 / EDUCATIONAL WEB APP</span>
+              </div>
+              <div class="project-content">
+                <div class="project-title-row"><h3>Sugar Shield AI</h3><div class="project-actions"><a class="project-icon-link" href="https://github.com/sachinm2006/SUGARSHEILD.AI" target="_blank" rel="noreferrer" aria-label="Open Sugar Shield AI on GitHub"><span aria-hidden="true">↗</span></a></div></div>
+                <p>An educational diabetes-management web app with tracking, reminders, recommendations, and AI chat.</p>
+                <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Supabase</li></ul>
+              </div>
+            </article>
+
+            <article class="project-card project-software">
+              <div class="project-visual app-visual med-visual" aria-label="MED AI app interface with text and voice chat options" role="img">
+                <img class="project-preview-image" src="assets/med-ai-preview.png" alt="" aria-hidden="true" />
+                <span class="visual-label">04 / TEXT + VOICE</span>
+              </div>
+              <div class="project-content">
+                <div class="project-title-row"><h3>MED AI</h3><div class="project-actions"><a class="project-icon-link" href="https://github.com/sachinm2006/MEDAI" target="_blank" rel="noreferrer" aria-label="Open MED AI on GitHub"><span aria-hidden="true">↗</span></a></div></div>
+                <p>A conversational web app with streaming chat, conversation history, speech-to-text, and text-to-speech.</p>
+                <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Voice UI</li></ul>
+              </div>
+            </article>
+
+            <article class="project-card project-software project-wide">
+              <div class="project-visual video-visual" aria-label="Video editor preview showing a mountain scene and multitrack timeline" role="img">
+                <img class="project-preview-image" src="assets/video-editor-preview.png" alt="" aria-hidden="true" />
+                <span class="visual-label">05 / HACKERRING 2.0</span>
+              </div>
+              <div class="project-content">
+                <div class="project-title-row"><h3>Audience-Aware Video Transformation</h3><div class="project-actions"><a class="project-icon-link" href="https://github.com/sachinm2006/Audience-Aware-Video-Transformation" target="_blank" rel="noreferrer" aria-label="Open Audience-Aware Video Transformation on GitHub"><span aria-hidden="true">↗</span></a></div></div>
+                <p>An AI-assisted editing concept that creates audience-specific video versions with human review and context checks.</p>
+                <ul class="tag-list"><li>Python</li><li>FastAPI</li><li>Whisper</li><li>FFmpeg</li></ul>
+              </div>
+            </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container interests-section" id="interests" aria-labelledby="interests-title">
+        <div class="section-heading">
+          <p class="eyebrow">Technical interests</p>
+          <h2 id="interests-title">Areas I’m <span>interested in.</span></h2>
+        </div>
+        <div class="interest-list">
+          <div class="interest-card"><span class="interest-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m11 8-7 8 7 8M21 8l7 8-7 8M19 5l-6 22" /></svg></span><b>C++</b></div>
+          <div class="interest-card"><span class="interest-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="7" rx="10" ry="4"/><path d="M6 7v6c0 2.2 4.5 4 10 4s10-1.8 10-4V7M6 13v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6M6 19v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6"/></svg></span><b>Data Structures<br />and Algorithms</b></div>
+          <div class="interest-card"><span class="interest-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="8" y="8" width="16" height="16" rx="2"/><path d="M12 12h8v8h-8zM12 3v5m4-5v5m4-5v5M12 24v5m4-5v5m4-5v5M3 12h5m-5 4h5m-5 4h5m16-8h5m-5 4h5m-5 4h5"/></svg></span><b>Digital Electronics<br />and Circuit Design</b></div>
+          <div class="interest-card"><span class="interest-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 4a5 5 0 0 0-9 3 5 5 0 0 0-2 9 5 5 0 0 0 3 9 5 5 0 0 0 9 2zM16 4a5 5 0 0 1 9 3 5 5 0 0 1 2 9 5 5 0 0 1-3 9 5 5 0 0 1-9 2zM16 4v24M8 11h5m-5 8h5m11-8h-5m5 8h-5"/></svg></span><b>IoT and Embedded<br />Systems</b></div>
+          <div class="interest-card"><span class="interest-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M16 4c4 3 6 7 6 12s-2 9-6 12c-4-3-6-7-6-12s2-9 6-12zM5 12h22M5 20h22"/></svg></span><b>AI</b></div>
+          <div class="interest-card"><span class="interest-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4a19 19 0 0 1 0 24M16 4a19 19 0 0 0 0 24"/></svg></span><b>Full-Stack<br />Development</b></div>
+          <div class="interest-card"><span class="interest-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M12 20 9 23a5 5 0 0 1-7-7l6-6a5 5 0 0 1 7 0m5 2 3-3a5 5 0 0 1 7 7l-6 6a5 5 0 0 1-7 0m-7-1 12-12"/></svg></span><b>Hardware–Software<br />Integration</b></div>
+        </div>
+      </section>
+
+      <section class="section journey-section" id="journey" aria-label="Hackathon and education">
+        <div class="container journey-grid">
+          <article class="hackathon-card" id="hackathon">
+            <div class="hackathon-copy">
+              <p class="eyebrow">Hackathon</p>
+              <h3>Hackerring 2.0</h3>
+              <p>Participated with team Nocturnals (four members) in the Voice AI track. Advanced to the offline Round 2 final and received a participation certificate.</p>
+            </div>
+            <div class="hackathon-emblem" aria-label="Hackerring 2.0">
+              <span class="emblem-slashes" aria-hidden="true"><i></i><i></i><i></i></span>
+              <strong>HACKERRING 2.0</strong>
+            </div>
+            <ul class="hackathon-facts">
+              <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-13 4h2m3 0h2m-7 3h2"/></svg></span><span>October 8–10, 2026</span></li>
+              <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="8" r="2.5"/><path d="M3 20v-2a6 6 0 0 1 12 0v2zm13-6a4.5 4.5 0 0 1 5 4.5V20h-4"/></svg></span><span>Team Nocturnals<br />(4 members)</span></li>
+              <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7V3h18v4L12 21z"/></svg></span><span>Voice AI track</span></li>
+            </ul>
+          </article>
+          <article class="education-card" id="education">
+            <div class="education-heading">
+              <p class="eyebrow">Education</p>
+              <h3>B.E. Electronics and<br />Communication Engineering</h3>
+            </div>
+            <div class="education-details">
+              <span class="education-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m2 11 14-7 14 7-14 7zM7 14v7c5 4 13 4 18 0v-7M29 11v8"/></svg></span>
+              <p>RV Institute of Technology<br />and Management, Bengaluru<br />Second Year</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container contact-section" aria-labelledby="contact-title">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">Have something interesting in mind?</p>
+            <h2 id="contact-title">Let’s build something <span>great.</span></h2>
+            <p>I’m always glad to connect about software, electronics, and hands-on projects.</p>
+          </div>
+          <div class="contact-links">
+            <a class="button button-primary" href="mailto:SACHINNAGARAJ28@GMAIL.COM">Let’s connect <span aria-hidden="true">↗</span></a>
+            <a class="social-link" href="https://www.linkedin.com/in/sachin-nagaraj-50b8a2418" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="social-link" href="https://github.com/sachinm2006" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container" id="contact">
+      <a class="brand footer-brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark-wrap" aria-hidden="true"><img class="brand-mark" src="assets/snm-mark.png" alt="" /></span>
+        <span class="brand-name">Sachin Nagaraj Mevundi</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#top">Home</a><a href="#projects">Projects</a><a href="#interests">Skills</a><a href="#hackathon">Hackerring 2.0</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-socials" aria-label="Contact links">
+        <a href="https://www.linkedin.com/in/sachin-nagaraj-50b8a2418" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/sachinm2006" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.75-1.32-3.75-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.61 1.22 3.25.94.1-.73.4-1.22.71-1.5-2.48-.28-5.1-1.24-5.1-5.53 0-1.22.44-2.21 1.16-2.99-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.08 1.14a10.7 10.7 0 0 1 5.6 0c2.13-1.44 3.08-1.14 3.08-1.14.61 1.54.23 2.68.12 2.96.72.78 1.15 1.77 1.15 2.99 0 4.3-2.63 5.24-5.12 5.52.4.35.76 1.03.76 2.08v3.06c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg></a>
+        <a href="mailto:SACHINNAGARAJ28@GMAIL.COM" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg></a>
+      </div>
+    </footer>
+  </body>
+</html>
