@@ -98,6 +98,48 @@ h1 span, h2 span { color: var(--lavender); }
 .hero-art { position: relative; display: grid; min-height: 430px; place-items: center; }
 .hero-art::before { display: none; }
 .art-grid { display: none; }
+.orbit-system { position: absolute; z-index: 0; inset: 0; display: grid; place-items: center; pointer-events: none; }
+.orbit-track {
+  --orbit-speed: 30s;
+  --orbit-tilt: 0deg;
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  display: block;
+  border: 1px solid rgba(183, 125, 255, .19);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(var(--orbit-tilt));
+  animation: orbit-spin var(--orbit-speed) linear infinite;
+}
+.orbit-track-code { width: min(84%, 470px); height: 70%; --orbit-tilt: -12deg; --orbit-speed: 34s; }
+.orbit-track-chip { width: min(74%, 420px); height: 58%; --orbit-tilt: 14deg; --orbit-speed: 29s; border-color: rgba(156, 103, 241, .17); }
+.orbit-track-ai { width: min(64%, 370px); height: 47%; --orbit-tilt: -8deg; --orbit-speed: 25s; border-color: rgba(207, 158, 255, .15); }
+.orbit-track-data { width: min(92%, 500px); height: 82%; --orbit-tilt: 7deg; --orbit-speed: 40s; border-color: rgba(156, 103, 241, .12); }
+.orbit-satellite {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  margin-left: -13.5px;
+  border: 1px solid rgba(211, 176, 255, .38);
+  border-radius: 50%;
+  color: #dfc2ff;
+  background: rgba(26, 12, 42, .82);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 0 15px rgba(157, 72, 255, .2);
+  animation: orbit-counter var(--orbit-speed) linear infinite;
+}
+.orbit-satellite svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes orbit-spin {
+  from { transform: translate(-50%, -50%) rotate(var(--orbit-tilt)); }
+  to { transform: translate(-50%, -50%) rotate(calc(var(--orbit-tilt) + 360deg)); }
+}
+@keyframes orbit-counter {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
 .monogram-stage { position: relative; z-index: 1; display: grid; width: min(88%, 390px); aspect-ratio: 1.25; place-items: center; background: none; }
 .hero-mark-image { width: 160%; max-width: none; filter: url(#logo-background-cutout); }
 .art-note { position: absolute; z-index: 2; color: var(--subtle); font-size: .62rem; font-weight: 700; letter-spacing: .2em; }
@@ -268,7 +310,7 @@ h1 span, h2 span { color: var(--lavender); }
   .hero { min-height: auto; padding-block: 3rem 2.5rem; }
   .hero-grid { grid-template-columns: 1fr minmax(250px, .72fr); gap: 1rem; }
   .hero-art { min-height: 340px; }
-  .note-right { right: -5%; }
+  .note-right { display: none; }
   .about-layout { gap: 2rem; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-card:not(.project-wide), .project-wide,
@@ -300,11 +342,18 @@ h1 span, h2 span { color: var(--lavender); }
   .hero-lede { max-width: 540px; font-size: 1rem; }
   .hero-meta { display: none; }
   .hero-art { min-height: 270px; margin: -.2rem 0 0; }
+  .orbit-track-code { width: 86%; height: 78%; }
+  .orbit-track-chip { width: 76%; height: 64%; }
+  .orbit-track-ai { width: 65%; height: 52%; }
+  .orbit-track-data { width: 94%; height: 88%; }
+  .orbit-satellite { width: 24px; height: 24px; top: -12px; margin-left: -12px; }
+  .orbit-satellite svg { width: 12px; height: 12px; }
   .monogram-stage { width: min(72%, 300px); border-radius: 0; }
   .hero-mark-image { width: 125%; }
   .note-top { top: 4%; left: 14%; }
   .note-bottom { right: 12%; bottom: 4%; }
   .note-right { top: 18%; right: 0; font-size: .54rem; }
+  .note-right { display: none; }
   .scroll-cue { display: none; }
   .section { padding-block: 2.5rem; }
   .projects-section { padding-block: 1rem .75rem; }
