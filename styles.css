@@ -99,6 +99,7 @@ h1 span, h2 span { color: var(--lavender); }
 .hero-art::before { display: none; }
 .art-grid { display: none; }
 .orbit-system { position: absolute; z-index: 0; inset: 0; display: grid; place-items: center; pointer-events: none; }
+.orbit-motion { position: absolute; z-index: 2; inset: 0; pointer-events: none; }
 .orbit-track {
   --orbit-speed: 30s;
   --orbit-delay: 0s;
@@ -111,6 +112,7 @@ h1 span, h2 span { color: var(--lavender); }
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(var(--orbit-tilt));
 }
+.orbit-motion-track { border-color: transparent; }
 .orbit-track-code { width: min(84%, 470px); height: 70%; --orbit-tilt: -12deg; --orbit-speed: 34s; --orbit-delay: -3s; }
 .orbit-track-chip { width: min(74%, 420px); height: 58%; --orbit-tilt: 14deg; --orbit-speed: 29s; --orbit-delay: -9s; border-color: rgba(156, 103, 241, .17); }
 .orbit-track-ai { width: min(64%, 370px); height: 47%; --orbit-tilt: -8deg; --orbit-speed: 25s; --orbit-delay: -6s; border-color: rgba(207, 158, 255, .15); }
