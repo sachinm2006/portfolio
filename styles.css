@@ -112,7 +112,7 @@ h1 span, h2 span { color: var(--lavender); }
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(var(--orbit-tilt));
 }
-.orbit-motion-track { border-color: transparent; }
+.orbit-track.orbit-motion-track { border-color: transparent; }
 .orbit-track-code { width: min(84%, 470px); height: 70%; --orbit-tilt: -12deg; --orbit-speed: 34s; --orbit-delay: -3s; }
 .orbit-track-chip { width: min(74%, 420px); height: 58%; --orbit-tilt: 14deg; --orbit-speed: 29s; --orbit-delay: -9s; border-color: rgba(156, 103, 241, .17); }
 .orbit-track-ai { width: min(64%, 370px); height: 47%; --orbit-tilt: -8deg; --orbit-speed: 25s; --orbit-delay: -6s; border-color: rgba(207, 158, 255, .15); }
@@ -122,29 +122,91 @@ h1 span, h2 span { color: var(--lavender); }
 .orbit-track-chip .orbit-star { top: 73%; left: 81%; color: rgba(185, 138, 255, .74); }
 .orbit-track-ai .orbit-star { top: 68%; left: 12%; }
 .orbit-track-data .orbit-star { top: 24%; left: 86%; color: rgba(183, 132, 255, .68); }
-.orbit-rotor { position: absolute; z-index: 2; inset: 0; animation: orbit-rotate var(--orbit-speed) linear infinite; animation-delay: var(--orbit-delay); }
+.orbit-rotor { position: absolute; z-index: 2; inset: 0; transform: rotate(var(--orbit-tilt)); }
 .orbit-satellite {
   position: absolute;
-  top: -13px;
+  top: 0;
   left: 50%;
   display: grid;
   width: 27px;
   height: 27px;
   place-items: center;
-  margin-left: -13.5px;
+  transform: translate(-50%, -50%);
   border: 1px solid rgba(211, 176, 255, .38);
   border-radius: 50%;
   color: #dfc2ff;
   background: rgba(26, 12, 42, .82);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 0 15px rgba(157, 72, 255, .2);
-  animation: orbit-counter var(--orbit-speed) linear infinite;
+  animation: orbit-ellipse var(--orbit-speed) linear infinite;
   animation-delay: var(--orbit-delay);
 }
 .orbit-satellite svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
-@keyframes orbit-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@keyframes orbit-counter {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
+@keyframes orbit-ellipse {
+  0.0000% { left: 100.000%; top: 50.000%; }
+  1.5625% { left: 99.759%; top: 54.901%; }
+  3.1250% { left: 99.039%; top: 59.755%; }
+  4.6875% { left: 97.847%; top: 64.514%; }
+  6.2500% { left: 96.194%; top: 69.134%; }
+  7.8125% { left: 94.096%; top: 73.570%; }
+  9.3750% { left: 91.573%; top: 77.779%; }
+  10.9375% { left: 88.651%; top: 81.720%; }
+  12.5000% { left: 85.355%; top: 85.355%; }
+  14.0625% { left: 81.720%; top: 88.651%; }
+  15.6250% { left: 77.779%; top: 91.573%; }
+  17.1875% { left: 73.570%; top: 94.096%; }
+  18.7500% { left: 69.134%; top: 96.194%; }
+  20.3125% { left: 64.514%; top: 97.847%; }
+  21.8750% { left: 59.755%; top: 99.039%; }
+  23.4375% { left: 54.901%; top: 99.759%; }
+  25.0000% { left: 50.000%; top: 100.000%; }
+  26.5625% { left: 45.099%; top: 99.759%; }
+  28.1250% { left: 40.245%; top: 99.039%; }
+  29.6875% { left: 35.486%; top: 97.847%; }
+  31.2500% { left: 30.866%; top: 96.194%; }
+  32.8125% { left: 26.430%; top: 94.096%; }
+  34.3750% { left: 22.221%; top: 91.573%; }
+  35.9375% { left: 18.280%; top: 88.651%; }
+  37.5000% { left: 14.645%; top: 85.355%; }
+  39.0625% { left: 11.349%; top: 81.720%; }
+  40.6250% { left: 8.427%; top: 77.779%; }
+  42.1875% { left: 5.904%; top: 73.570%; }
+  43.7500% { left: 3.806%; top: 69.134%; }
+  45.3125% { left: 2.153%; top: 64.514%; }
+  46.8750% { left: 0.961%; top: 59.755%; }
+  48.4375% { left: 0.241%; top: 54.901%; }
+  50.0000% { left: 0.000%; top: 50.000%; }
+  51.5625% { left: 0.241%; top: 45.099%; }
+  53.1250% { left: 0.961%; top: 40.245%; }
+  54.6875% { left: 2.153%; top: 35.486%; }
+  56.2500% { left: 3.806%; top: 30.866%; }
+  57.8125% { left: 5.904%; top: 26.430%; }
+  59.3750% { left: 8.427%; top: 22.221%; }
+  60.9375% { left: 11.349%; top: 18.280%; }
+  62.5000% { left: 14.645%; top: 14.645%; }
+  64.0625% { left: 18.280%; top: 11.349%; }
+  65.6250% { left: 22.221%; top: 8.427%; }
+  67.1875% { left: 26.430%; top: 5.904%; }
+  68.7500% { left: 30.866%; top: 3.806%; }
+  70.3125% { left: 35.486%; top: 2.153%; }
+  71.8750% { left: 40.245%; top: 0.961%; }
+  73.4375% { left: 45.099%; top: 0.241%; }
+  75.0000% { left: 50.000%; top: 0.000%; }
+  76.5625% { left: 54.901%; top: 0.241%; }
+  78.1250% { left: 59.755%; top: 0.961%; }
+  79.6875% { left: 64.514%; top: 2.153%; }
+  81.2500% { left: 69.134%; top: 3.806%; }
+  82.8125% { left: 73.570%; top: 5.904%; }
+  84.3750% { left: 77.779%; top: 8.427%; }
+  85.9375% { left: 81.720%; top: 11.349%; }
+  87.5000% { left: 85.355%; top: 14.645%; }
+  89.0625% { left: 88.651%; top: 18.280%; }
+  90.6250% { left: 91.573%; top: 22.221%; }
+  92.1875% { left: 94.096%; top: 26.430%; }
+  93.7500% { left: 96.194%; top: 30.866%; }
+  95.3125% { left: 97.847%; top: 35.486%; }
+  96.8750% { left: 99.039%; top: 40.245%; }
+  98.4375% { left: 99.759%; top: 45.099%; }
+  100.0000% { left: 100.000%; top: 50.000%; }
 }
 .monogram-stage { position: relative; z-index: 1; display: grid; width: min(88%, 390px); aspect-ratio: 1.25; place-items: center; background: none; }
 .hero-mark-image { width: 160%; max-width: none; filter: url(#logo-background-cutout); }
@@ -352,7 +414,7 @@ h1 span, h2 span { color: var(--lavender); }
   .orbit-track-chip { width: 76%; height: 64%; }
   .orbit-track-ai { width: 65%; height: 52%; }
   .orbit-track-data { width: 94%; height: 88%; }
-  .orbit-satellite { width: 24px; height: 24px; top: -12px; margin-left: -12px; }
+  .orbit-satellite { width: 24px; height: 24px; }
   .orbit-satellite svg { width: 12px; height: 12px; }
   .monogram-stage { width: min(72%, 300px); border-radius: 0; }
   .hero-mark-image { width: 125%; }
