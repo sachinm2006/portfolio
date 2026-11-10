@@ -324,7 +324,7 @@ h1 span, h2 span { color: var(--lavender); }
 .interest-card:nth-child(3n + 1) { border-color: rgba(183, 117, 244, .35); }
 
 .journey-section { padding-block: .25rem 1rem; border-top: 1px solid var(--line); background: radial-gradient(ellipse at 85% 50%, rgba(89, 31, 140, .17), transparent 40%), rgba(24, 11, 36, .36); }
-.journey-grid { display: grid; grid-template-columns: 1.45fr 1fr; align-items: stretch; gap: 1rem; }
+.journey-grid { display: grid; grid-template-columns: 1.45fr 1fr; align-items: start; gap: 1rem; }
 .hackathon-list { display: grid; align-content: start; gap: 1rem; min-width: 0; }
 .hackiiitd-card { grid-template-columns: 1fr auto; align-items: start; }
 .hackiiitd-card .hackathon-copy { grid-column: 1 / -1; }
