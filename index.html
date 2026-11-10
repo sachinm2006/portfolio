@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#100719" />
+    <meta name="theme-color" content="#101216" />
     <meta name="description" content="Sachin Nagaraj Mevundi — ECE student exploring software, electronics, and the space between them." />
     <title>Sachin Nagaraj Mevundi — Software × Electronics</title>
     <link rel="stylesheet" href="styles.css" />
@@ -14,6 +14,15 @@
       <defs>
         <filter id="logo-background-cutout" color-interpolation-filters="linearRGB">
           <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  12.756 42.912 4.332 0 -0.42" />
+          <feColorMatrix type="saturate" values="0" />
+          <feComponentTransfer>
+            <feFuncR type="table" tableValues="0.27 0.62 0.98 1" />
+            <feFuncG type="table" tableValues="0.25 0.50 0.76 0.82" />
+            <feFuncB type="table" tableValues="0.31 0.53 0.08 0" />
+          </feComponentTransfer>
+          <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 0 0.04 0.16 0.5 0.8 0.96 1" />
+          </feComponentTransfer>
         </filter>
       </defs>
     </svg>
@@ -21,7 +30,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#top" aria-label="Sachin Nagaraj Mevundi home">
-          <span class="brand-mark-wrap" aria-hidden="true"><img class="brand-mark" src="assets/snm-mark.png" alt="" /></span>
+          <span class="brand-mark-wrap" aria-hidden="true"><img class="brand-mark" src="assets/snm-mark-silver-yellow.png" alt="" /></span>
           <span class="brand-name">Sachin Nagaraj Mevundi</span>
         </a>
 
@@ -82,7 +91,7 @@
               </div>
             </div>
             <div class="monogram-stage">
-              <img class="hero-mark-image" src="assets/snm-mark.png" alt="Sachin’s SNM monogram" />
+              <img class="hero-mark-image" src="assets/snm-mark-silver-yellow.png" alt="Sachin’s SNM monogram" />
             </div>
             <span class="art-note note-right">IDEAS<br />CIRCUITS<br />CODE<br />AI<br />IMPACT</span>
           </div>
@@ -241,11 +250,50 @@
           </div>
         </div>
       </section>
+      <section class="portfolio-stats section-shell container" aria-labelledby="portfolio-stats-title">
+        <div class="portfolio-stats-heading">
+          <div>
+            <p class="eyebrow">A quick snapshot</p>
+            <h2 id="portfolio-stats-title">Portfolio <span>at a glance.</span></h2>
+          </div>
+          <p class="portfolio-stats-caption">A few numbers behind the work.</p>
+        </div>
+        <div class="portfolio-stats-grid">
+          <a class="portfolio-stat-card" href="#projects">
+            <span class="portfolio-stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 8h8M8 12h5M8 16h8"/></svg></span>
+            <span class="portfolio-stat-value">05</span>
+            <span class="portfolio-stat-label">Projects built</span>
+            <span class="portfolio-stat-note">Software + electronics</span>
+            <span class="portfolio-stat-link" aria-hidden="true">↗</span>
+          </a>
+          <a class="portfolio-stat-card" href="#interests">
+            <span class="portfolio-stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.8 6.5l14.4 11M4.8 17.5l14.4-11M3 12h18"/></svg></span>
+            <span class="portfolio-stat-value">07</span>
+            <span class="portfolio-stat-label">Technical interests</span>
+            <span class="portfolio-stat-note">From C++ to embedded systems</span>
+            <span class="portfolio-stat-link" aria-hidden="true">↗</span>
+          </a>
+          <a class="portfolio-stat-card" href="#hackathon">
+            <span class="portfolio-stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 7H4v2a4 4 0 0 0 4 4M17 7h3v2a4 4 0 0 1-4 4"/></svg></span>
+            <span class="portfolio-stat-value">01</span>
+            <span class="portfolio-stat-label">Hackathon</span>
+            <span class="portfolio-stat-note">Hackerring 2.0 · Voice AI</span>
+            <span class="portfolio-stat-link" aria-hidden="true">↗</span>
+          </a>
+          <a class="portfolio-stat-card" href="#education">
+            <span class="portfolio-stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 11v5c3 2 7 2 10 0v-5M21 9v6"/></svg></span>
+            <span class="portfolio-stat-value">02</span>
+            <span class="portfolio-stat-label">B.E. year</span>
+            <span class="portfolio-stat-note">Electronics &amp; Communication</span>
+            <span class="portfolio-stat-link" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer container" id="contact">
       <a class="brand footer-brand" href="#top" aria-label="Back to top">
-        <span class="brand-mark-wrap" aria-hidden="true"><img class="brand-mark" src="assets/snm-mark.png" alt="" /></span>
+        <span class="brand-mark-wrap" aria-hidden="true"><img class="brand-mark" src="assets/snm-mark-silver-yellow.png" alt="" /></span>
         <span class="brand-name">Sachin Nagaraj Mevundi</span>
       </a>
       <nav class="footer-nav" aria-label="Footer navigation">
